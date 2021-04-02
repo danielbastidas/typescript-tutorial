@@ -1,17 +1,19 @@
 class MyClass {
-	name: string ="default value";
-	static staticField : String = "Static value";
-	lastName : String;
+	name: string = "default value";
+	static staticField: String = "Static value";
+	private lastName: String;
 
 	constructor() {
 		this.lastName = MyClass.staticField;
 	}
 
-	method(arg:String) {
+	method(arg: String) {
 		console.log(arg);
+	}
+
+	getLastName(): String {
+		return this.lastName;
 	}
 }
 
-var myObject = new MyClass();
-console.log(myObject.lastName);
-myObject.method(myObject.name);
+export { MyClass }
