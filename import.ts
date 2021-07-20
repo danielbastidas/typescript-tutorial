@@ -1,7 +1,8 @@
 // in order to compile this file including the dependencies you only have to execute the following command:
 // tsc import.ts
 
-import { MyInterface } from "./interface";
+// the first import shows how to import an interface that was exported as default
+import MyInterface from "./interface";
 import { MyClass } from "./classes";
 
 function test(stark: MyInterface) {
